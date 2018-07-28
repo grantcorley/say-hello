@@ -1,7 +1,7 @@
 const main = document.querySelector('main');
 const inputField = main.querySelector('form.input-field input');
 const defaultValue = inputField.value;
-const greeting = main.querySelector("p.greeting");
+const greeting = main.querySelector(".greeting");
 
 let isFocused = false;
 
@@ -40,13 +40,14 @@ document.addEventListener('keydown', function(e){
    //if the user hits ENTER...
    if (keycode == '13' && inputField.value != defaultValue ) {
        
-    //console.log('SUBMIT');
-       let myName = inputField.value;
-       inputField.blur();
+        console.log('SUBMIT');
+       
+        let myName = inputField.value;
+        inputField.blur();
         
-       let finalOutput = "Hello, " + myName + ". Nice to meet you!"
+       let newGreeting = `Hello, ${myName}. Nice to meet you!`;
 
-       greeting.innerText = finalOutput;
+       greeting.innerText += newGreeting;
          
    }
 
