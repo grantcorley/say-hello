@@ -10,6 +10,15 @@ input{
     color:gray;
 }
 
+ input:focus { 
+    background-color: azure;;
+} 
+
+input.focused {
+    color:black;
+}
+
+
 label{
     display:block;
     margin-bottom:0;

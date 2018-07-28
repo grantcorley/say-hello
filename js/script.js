@@ -5,50 +5,43 @@ const greeting = main.querySelector(".greeting");
 
 let isFocused = false;
 
-
+//add event listeners to input
 inputField.addEventListener('focus', function(){
-
     isFocused = true;
-    //console.log('FOCUS');
-
 })
 
 inputField.addEventListener('blur', function(){
-
     isFocused = false;
-    //console.log('BLUR');
-
 })
-
-
-
-
 
 
 document.addEventListener('keydown', function(e){
     
     if(isFocused){
-
         if(inputField.value === defaultValue){
             inputField.value = "";
         }
 
+        inputField.classList.add('focused');
+
     }//END if isFocused
 
+    
    const keycode = (e.keyCode ? e.keyCode : e.which);
 
    //if the user hits ENTER...
    if (keycode == '13' && inputField.value != defaultValue ) {
        
-        console.log('SUBMIT');
-       
         let myName = inputField.value;
         inputField.blur();
         
-       let newGreeting = `Hello, ${myName}. Nice to meet you!`;
+        const newGreeting = `Hello, ${myName}. Nice to meet you!`;
+        const newParagraph = document.createElement("p");
 
-       greeting.innerText += newGreeting;
-         
+        newParagraph.innerText = newGreeting;
+
+        greeting.appendChild(newParagraph);
+   
    }
 
 
