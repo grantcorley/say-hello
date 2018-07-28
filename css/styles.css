@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
+h1, h2{
+    /* font-family: 'Anton', sans-serif; */
+}
+
+input{
+    width:100%;
+    color:gray;
+}
+
+label{
+    display:block;
+    margin-bottom:0;
+}
+
+
+
+
+/* ---------- media queries -------------- */
+@media (min-width: 640px) { 
+
+
+    main{
+        padding:2em;
+    }
+
+    input{
+        width:60%;
+        color:gray;
+    }
+    
+
+
+ }/*end media query*/
