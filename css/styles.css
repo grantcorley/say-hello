@@ -2,6 +2,7 @@
 
 h1, h2{
     /* font-family: 'Anton', sans-serif; */
+    font-weight: bold;
 }
 
 input{
@@ -14,6 +15,9 @@ label{
     margin-bottom:0;
 }
 
+p.greeting{
+    margin-top:1em;
+}
 
 
 
